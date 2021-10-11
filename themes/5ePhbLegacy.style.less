@@ -17,20 +17,20 @@ body {
 	-webkit-print-color-adjust : exact;
 }
 .useSansSerif(){
-	font-family : ScalySans;
+	font-family : "Scaly Sans";
 	em{
-		font-family : ScalySans;
+		font-family : "Scaly Sans";
 		font-style  : italic;
 	}
 	strong{
-		font-family    : ScalySans;
+		font-family    : "Scaly Sans";
 		font-weight    : 800;
 		letter-spacing : -0.02em;
 	}
 }
 .useColumns(@multiplier : 1){
 	column-count         : 2;
-	column-fill          : auto;
+	column-fill          : balance;
 	column-gap           : 1cm;
 	column-width         : 8cm * @multiplier;
 	-webkit-column-count : 2;
@@ -53,7 +53,7 @@ body {
 	padding-bottom    : 1.5cm;
 	background-color  : @background;
 	background-image  : @backgroundImage;
-	font-family       : BookSanity;
+	font-family       : Bookinsanity;
 	font-size         : 0.317cm;
 	text-rendering    : optimizeLegibility;
 	page-break-before : always;
@@ -112,7 +112,7 @@ body {
 	h1,h2,h3,h4{
 		margin-top    : 0.2em;
 		margin-bottom : 0.2em;
-		font-family   : MrJeeves;
+		font-family   : "MrsEavesSmallCaps";
 		font-weight   : 800;
 		color         : @headerText;
 	}
@@ -122,11 +122,11 @@ body {
 		-webkit-column-span : all;
 		-moz-column-span    : all;
 		&+p::first-letter{
-			float       : left;
-			font-family : Solberry;
+			// float       : left;
+			font-family : "Solbera Imitation";
 			font-size   : 10em;
 			color       : #222;
-			line-height : 0.8em;
+			line-height : 0.7em;
 		}
 	}
 	h2{
@@ -142,7 +142,7 @@ body {
 	}
 	h5{
 		margin-bottom : 0.2em;
-		font-family   : ScalySansSmallCaps;
+		font-family   : "ScalaSans Caps";
 		font-size     : 0.423cm;
 		font-weight   : 900;
 	}
@@ -216,7 +216,7 @@ body {
 			}
 		}
 		h3{
-			font-family   : ScalySans;
+			font-family   : "Scaly Sans";
 			font-weight   : 400;
 			border-bottom : 1px solid @headerText;
 		}
@@ -416,7 +416,7 @@ body {
 .phb .descriptive{
 	margin-bottom       : 1em;
 	background-color    : #faf7ea;
-	font-family         : ScalySans;
+	font-family         : "Scaly Sans";
 	border-style        : solid;
 	border-width        : 7px;
 	border-image        : @descriptiveBoxImage 12 stretch;
@@ -431,11 +431,11 @@ body {
 		padding-top : .8em;
 	}
 	em {
-		font-family : ScalySans;
+		font-family : "Scaly Sans";
 		font-style  : italic;
 	}
 	strong {
-		font-family    : ScalySans;
+		font-family    : "Scaly Sans";
 		font-weight    : 800;
 		letter-spacing : -0.02em;
 	}
@@ -451,7 +451,7 @@ body {
 	.artist {
 		position    : absolute;
 		text-align  : center;
-		font-family : WalterTurncoat;
+		font-family : "Walter Turncoat";
 		font-size   : 0.27cm;
 		color       : @captionText;
 		p, p + p {
@@ -461,7 +461,7 @@ body {
 		}
 	 	h5 {
 			font-size   : 1.3em;
-			font-family : WalterTurncoat;
+			font-family : "Walter Turncoat";
 		}
 		a{
 			color           : inherit;
