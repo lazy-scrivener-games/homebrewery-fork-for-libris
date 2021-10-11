@@ -1,4 +1,4 @@
-@import (less) './themes/fonts/5e/fonts.less';
+// @import (less) './themes/fonts/5e/fonts.less';
 @import (less) './themes/assets/assets.less';
 
 //Colors
@@ -10,15 +10,22 @@
 @monsterStatBackground : #EEDBAB; // Light orange parchment
 @captionText           : #766649; // Brown
 @watercolorStain       : #BBAD82; // Light brown
-@page { margin: 0; }
+@page {
+	margin: 0; 
+	background-color  : @background;
+	background-image  : @backgroundImage;
+	size              : Letter;
+	padding           : 1.4cm 1.9cm 1.7cm;
+}
 body {
 	counter-reset : phb-page-numbers;
+	margin        : 0;
 }
 *{
 	-webkit-print-color-adjust : exact;
 }
 .useSansSerif(){
-	font-family : ScalySansRemake;
+	font-family : "Scaly Sans Remake";
 	font-size   : 0.318cm;
 	line-height : 1.2em;
 	p,dl,ul,ol {
@@ -63,12 +70,10 @@ body {
 	z-index           : 15;
 	box-sizing        : border-box;
 	overflow          : hidden;
-	height            : 279.4mm;
-	width             : 215.9mm;
-	background-color  : @background;
-	background-image  : @backgroundImage;
-	padding           : 1.4cm 1.9cm 1.7cm;
-	font-family       : BookInsanityRemake;
+	// height            : 279.4mm;
+	width             : 177.9mm;
+	font-family       : "Bookinsanity";
+	font-variant      : normal;
 	font-size         : 0.34cm;
 	text-rendering    : optimizeLegibility;
 	page-break-before : always;
@@ -129,7 +134,7 @@ body {
 	// *           HEADERS
 	// *****************************/
 	h1,h2,h3,h4{
-		font-family   : MrEavesRemake;
+		font-family   : "Mr Eaves SC Remake";
 		font-weight   : 800;
 		color         : @headerText;
 	}
@@ -140,8 +145,8 @@ body {
 		-webkit-column-span : all;
 		-moz-column-span    : all;
 		&+p::first-letter{
-			float                   : left;
-			font-family             : SolberaImitationRemake;
+			// float                   : left;
+			font-family             : "Solbera Imitation";
 			line-height             : 1em;
 			font-size               : 3.5cm;
 			padding-left            : 40px; //Allow background color to extend into margins
@@ -149,10 +154,10 @@ body {
 			margin-top              : -0.3cm;
 			padding-bottom          : 2px;
 			margin-bottom           : -20px;
-			background-image        : linear-gradient(-45deg, #322814, #998250, #322814);
-	    background-clip         : text;
-	    -webkit-background-clip : text;
-	    color                   : rgba(0, 0, 0, 0);
+			// background-image        : linear-gradient(-45deg, #322814, #998250, #322814);
+			// background-clip         : text;
+			// -webkit-background-clip : text;
+			// color                   : rgba(0, 0, 0, 0);
 		}
 		&+p::first-line{
 			font-variant : small-caps;
@@ -177,7 +182,7 @@ body {
 	h5{
 		//margin-top    : -0.02cm; //Font is misaligned. Shift up slightly
 		//margin-bottom : 0.02cm;
-		font-family   : ScalySansSmallCapsRemake;
+		font-family   : "Scaly Sans Caps";
 		font-size     : 0.423cm;
 		font-weight   : 900;
 		& + * {
@@ -287,7 +292,7 @@ body {
 		position    : absolute;
 		width       : auto;
 		text-align  : center;
-		font-family : WalterTurncoat;
+		font-family : "Walter Turncoat";
 		font-size   : 0.27cm;
 		color       : @captionText;
 		p, p + p {
@@ -297,7 +302,7 @@ body {
 		}
 	 	h5 {
 			font-size   : 1.3em;
-			font-family : WalterTurncoat;
+			font-family : "Walter Turncoat";
 		}
 		a{
 			color           : inherit;
@@ -396,7 +401,7 @@ body {
 			}
 		}
 		h3{
-			font-family    : ScalySansRemake;
+			font-family    : "Scaly Sans Remake";
 			font-weight    : 800;
 			font-variant   : small-caps;
 			border-bottom  : 2px solid @headerText;
@@ -698,7 +703,8 @@ body {
 				}
 			}
 			&:last-child {
-				font-family    : BookInsanityRemake;
+				font-family    : "Bookinsanity";
+				font-variant   : normal;
 				font-size      : 0.34cm;
 				font-weight    : normal;
 				color          : black;
