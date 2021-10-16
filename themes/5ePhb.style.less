@@ -84,15 +84,14 @@ body {
 		overflow-wrap : break-word;		//TODO: MAKE ALL MARGINS TOP-ONLY. USE * + * STYLE SELECTORS
 		display       : block;
 		line-height   : 1.3em;
+		display: table;		// fixes column wackiness in PDF
+		// margin-block-start: 0;  // this will fix the same issue in Chrome but is unneeded here
 		&+* {
 			margin-top : 0.325cm;
 		}
 		&+p{
 			margin-top : 0;
 		}
-
-		margin: 5px;
-		background-color: red;
 	}
 	ul{
 		margin-bottom       : 0.8em;
@@ -503,6 +502,7 @@ body {
 	//Full Width
 	.monster.wide{
 		.useColumns(0.96, @fillMode: balance);
+		width: 16.9cm;
 	}
 
 	//************************************
@@ -726,8 +726,8 @@ body {
 // *****************************/
 .page {
 	.block {
-		break-inside      : avoid;
-		display           : inline-block;
+		break-inside      : avoid;			// note: this can be a problem for PDF generation, but best to work around in Markdown
+		display           : inline-block;	// note: this can be a problem for PDF generation, but best to work around in Markdown
 		.page :where(&) {
 			width             : 100%;
 		}
